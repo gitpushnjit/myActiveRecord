@@ -52,7 +52,7 @@ class collection {
         $statement->setFetchMode(PDO::FETCH_CLASS, $class);
         $recordsSet =  $statement->fetchAll();
         
-        //print_r($recordsSet);
+        
         
          if(static::$modelName=='todo'){
          echo "<table border=\"1\"><tr><th>id</th><th>owneremail</th><th>ownerid</th><th>createddate</th><th>duedate</th><th>message</th><th>isdone</th></tr>";
@@ -201,7 +201,7 @@ class todo extends model {
          
     }
 }
-// this would be the method to put in the index page for accounts
+
 echo " Displaying all records of table Accounts </br>";
 accounts::findAll();
 echo " </br> ----------------------------------------------------------------------------------------------------------------------------------------------------------</br>";
@@ -209,13 +209,6 @@ echo " </br> -------------------------------------------------------------------
 echo " </br>Displaying all records of table Todos </br>";
 todos::findAll();
 echo " </br> ----------------------------------------------------------------------------------------------------------------------------------------------------------</br>"; 
-//print_r($accountRecords);
-//print_r('------------------------------------------------------------------------------------------');
-// this would be the method to put in the index page for todos
-//$todoRecords = todos::findAll();
-//print_r($todoRecords);
-//print_r('------------------------------------------------------------------------------------------');
-//this code is used to get one record and is used for showing one record or updating one record
 
 echo " </br>Displaying record with id 4 of table Todos </br>";
 $todoRecord = todos::findOne(4);
@@ -303,8 +296,6 @@ accounts::findAll();
 echo " </br> ----------------------------------------------------------------------------------------------------------------------------------------------------------</br>";
 
 
-//print_r($record);
-//$record = todos::create();
-//print_r($record);
+
 
 ?>
